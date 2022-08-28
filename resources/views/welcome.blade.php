@@ -13,9 +13,6 @@
     <!-- Styles -->
     @vite('resources/css/app.css')
 
-    <!-- Scripts -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
 </head>
 
 <body class="antialiased">
@@ -34,7 +31,7 @@
 
     @endif
 
-    <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+    
 
     <div class="bg-white">
         <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
