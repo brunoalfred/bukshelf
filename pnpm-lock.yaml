@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@tailwindcss/aspect-ratio': ^0.4.0
+  '@tailwindcss/forms': ^0.5.2
   autoprefixer: ^10.4.8
   axios: ^0.27
   laravel-vite-plugin: ^0.5.0
@@ -12,6 +13,7 @@ specifiers:
 
 devDependencies:
   '@tailwindcss/aspect-ratio': 0.4.0_tailwindcss@3.1.8
+  '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.8
   autoprefixer: 10.4.8_postcss@8.4.16
   axios: 0.27.2
   laravel-vite-plugin: 0.5.4_vite@3.0.9
@@ -57,6 +59,15 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
+      tailwindcss: 3.1.8_postcss@8.4.16
+    dev: true
+
+  /@tailwindcss/forms/0.5.2_tailwindcss@3.1.8:
+    resolution: {integrity: sha512-pSrFeJB6Bg1Mrg9CdQW3+hqZXAKsBrSG9MAfFLKy1pVA4Mb4W7C0k7mEhlmS2Dfo/otxrQOET7NJiJ9RrS563w==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
       tailwindcss: 3.1.8_postcss@8.4.16
     dev: true
 
@@ -581,6 +592,11 @@ packages:
     engines: {node: '>= 0.6'}
     dependencies:
       mime-db: 1.52.0
+    dev: true
+
+  /mini-svg-data-uri/1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
     dev: true
 
   /minimist/1.2.6:

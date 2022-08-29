@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./resources/**/*.blade.php",
+    "./resources/**/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
   ],
@@ -10,5 +11,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
   ],
 }
