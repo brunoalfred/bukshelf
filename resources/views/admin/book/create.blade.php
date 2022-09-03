@@ -16,8 +16,15 @@
     </header>
     <main>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+  <div class="px-4 py-8 sm:px-0">
+              <div class="px-4 sm:px-6 lg:px-8">
+            <form 
+            action="/books" 
+            method="post" 
+            class="space-y-8 divide-y divide-gray-200">
 
-            <form class="space-y-8 divide-y divide-gray-200">
+            @csrf
+
                 <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
                     <div>
                         <div>
@@ -27,11 +34,11 @@
 
                         <div class="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
                             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                                <label for="username" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Title </label>
+                                <label for="title" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Title </label>
                                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                                     <div class="max-w-lg flex rounded-md shadow-sm">
                                         <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm"> book name/ </span>
-                                        <input type="text" name="username" id="username" autocomplete="username" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                                        <input type="text" name="title" id="title" autocomplete="title" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
                                     </div>
                                 </div>
                             </div>
@@ -65,9 +72,50 @@
                                 </div>
                             </div>
 
-                            <x-input label="First Name" type="text" name="first-name" />
+                        <!--  <x-input label="ISBN" type="text" name="isbn" /> -->
 
-                            
+                        <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="isbn" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Isbn </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                    <div class="max-w-lg flex rounded-md shadow-sm">
+                                        <input type="text" name="isbn" id="isbn" autocomplete="isbn" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                                    </div>
+                                </div>
+                            </div>
+                     
+                     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="no_of_copies" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> No of copies </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                    <div class="max-w-lg flex rounded-md shadow-sm">
+                                        <input type="number" name="no_of_copies" id="no_of_copies" autocomplete="isbn" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="no_of_pages" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> No of Pages </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                    <div class="max-w-lg flex rounded-md shadow-sm">
+                                        <input type="number" name="no_of_pages" id="no_of_pages" autocomplete="isbn" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="price" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Price </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                    <div class="max-w-lg flex rounded-md shadow-sm">
+                                        <input type="text" name="price" id="price" autocomplete="price" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="price" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Language </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                    <div class="max-w-lg flex rounded-md shadow-sm">
+                                        <input type="text" name="language" id="language" autocomplete="language" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -80,7 +128,7 @@
                     </div>
                 </div>
             </form>
-
+<div><div>
             <!-- /End replace -->
         </div>
     </main>
