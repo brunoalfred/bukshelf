@@ -17,7 +17,7 @@ class BookController extends Controller
 
         $books = Book::all();
 
-         return view('admin.book.index', compact('books'));
+        return view('admin.book.index', compact('books'));
     }
 
     /**
@@ -27,7 +27,7 @@ class BookController extends Controller
      */
     public function create()
     {
-         return view('admin.book.create');
+        return view('admin.book.create');
     }
 
     /**
@@ -38,20 +38,18 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $book = Book::create([
             'isbn' => $request->isbn,
             'title' => $request->title,
-           'no_of_pages' => $request->no_of_pages,
+            'no_of_pages' => $request->no_of_pages,
             'no_of_copies' =>  $request->no_of_copies,
-             'price' => $request->price,
+            'price' => $request->price,
             'language' => $request->language,
 
         ]);
 
         return redirect(route('books.index'));
-
-
     }
 
     /**
@@ -79,7 +77,6 @@ class BookController extends Controller
         $book = Book::find($id);
 
         return view('admin.book.edit', compact('book'));
-
     }
 
     /**
@@ -110,6 +107,10 @@ class BookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $book = Book::find($id);
+
+        $book->delete();
+
+        return redirect(route('books.index'));
     }
 }
